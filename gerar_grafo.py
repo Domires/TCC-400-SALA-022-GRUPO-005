@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 # Importar arquivo shapefile
-G = nx.read_shp('arquivo.shp')
+G = nx.read_shp('shapefile/arquivo.shp')
 
 # Criar grafo direcionado
 weighted_G = nx.DiGraph()
@@ -16,6 +16,14 @@ for data in G.edges(data=True):
       else:
          weighted_G.add_edge(data[0], data[1], weight=data[2]['comp2'])
          weighted_G.add_edge(data[1], data[0], weight=data[2]['comp2'])
+
+# Criar arquivo txt com os dados do grafo
+f = open("arestas.txt", "a")
+f.write(str(weighted_G.edges(data=True)))
+f.close()
+f = open("vertices.txt", "a")
+f.write(str(weighted_G.nodes()))
+f.close()
 
 # Criar dicionário de posições
 pos = {v:v for v in weighted_G.nodes()}
@@ -30,3 +38,4 @@ nx.draw_networkx(weighted_G, pos, node_size=10, with_labels=False, width=0.2)
 
 # Exibir grafo
 plt.show()
+
