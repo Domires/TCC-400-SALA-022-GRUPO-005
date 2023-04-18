@@ -18,12 +18,12 @@ for data in G.edges(data=True):
          weighted_G.add_edge(data[1], data[0], weight=data[2]['comp2'])
 
 # Criar arquivo txt com os dados do grafo
-f = open("arestas.txt", "a")
-f.write(str(weighted_G.edges(data=True)))
-f.close()
-f = open("vertices.txt", "a")
-f.write(str(weighted_G.nodes()))
-f.close()
+# f = open("arestas.txt", "a")
+# f.write(str(weighted_G.edges(data=True)))
+# f.close()
+# f = open("vertices.txt", "a")
+# f.write(str(weighted_G.nodes()))
+# f.close()
 
 # Criar dicionário de posições
 pos = {v:v for v in weighted_G.nodes()}
