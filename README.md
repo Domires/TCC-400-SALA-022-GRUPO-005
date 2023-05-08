@@ -11,3 +11,8 @@ Execução:
 - Em seguida, execute o gerar_csv.py digitando "python gerar_csv.py" no prompt de comando e pressione Enter. Este script irá gerar a tabela com as menores distâncias entre os vértices em formato csv.
 
 # OBS: O código fonte ainda está desenvolvimento
+- [x] Gerar Digrafo a partir de um arquivo shapefile
+- [x] Calcular menor caminho entre todos os vértices (CD e Destinos) utilizando Dijkstra
+- [x] Gerar CSV com a matriz de distâncias entre cada vértice
+- [ ] Implementar o método de Clarke e Wright para gerar o roteiro final
+- [ ] Refatorar código (desacoplar)
