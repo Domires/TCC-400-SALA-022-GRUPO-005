@@ -17,3 +17,5 @@ with open('dijkstra_graph.csv', 'w', newline='') as csvfile:
                 print(linha)
                 linha = []
                 qtd = 0
+
+                
