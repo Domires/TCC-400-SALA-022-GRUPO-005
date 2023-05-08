@@ -10,4 +10,4 @@ Execução:
 - Execute o script.py digitando "python script.py" no prompt de comando e pressione Enter. Este script irá gerar o grafo e os dados necessários para gerar o csv.
 - Em seguida, execute o gerar_csv.py digitando "python gerar_csv.py" no prompt de comando e pressione Enter. Este script irá gerar a tabela com as menores distâncias entre os vértices em formato csv.
 
-# OBS: O código fonte ainda não está desenvolvimento
+# OBS: O código fonte ainda está desenvolvimento
