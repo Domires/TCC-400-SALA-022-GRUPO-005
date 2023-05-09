@@ -24,10 +24,11 @@ nx.draw_networkx(weighted_G, pos, node_size=20, with_labels=False, width=0.2)
 Empresa = (-45.6028463, -23.0316574)
 DESTINOS = {'Empresa': Empresa,'A': (-45.5996569, -23.0284983), 'B': (-45.5979163, -23.0304307), 'C': (-45.5990331, -23.0315897), 'D': (-45.6056408, -23.0272866), 'E': (-45.6084752, -23.0293651), 'F': (-45.6054539, -23.029753), 'G': (-45.6040497, -23.0338179), 'H': (-45.6039264, -23.0348083), 'I': (-45.6018611, -23.0357605)}
 
-file_teste = open('dijkstra_graph.txt', 'w')
-
 # TRAJETOS CALCULADOS COM O DIJKSTRA
 trajetos = {}
+
+# ARMAZENA TODOS OS TRAJETOS
+todos_os_trajetos = open('dijkstra_graph.txt', 'w')
 
 def Dijkstra(key, value):
     # A PARTIR DE Empresa - DESCOMENTAR PARA VISUALIZAR
