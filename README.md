@@ -12,7 +12,7 @@ Execução:
 
 # OBS: O código fonte ainda está desenvolvimento
 - [x] Gerar Digrafo a partir de um arquivo shapefile
-- [x] Calcular menor caminho entre todos os vértices (CD e Destinos) utilizando Dijkstra
+- [x] Calcular menor caminho entre todos os vértices (Empresa e Funcionários) utilizando Dijkstra
 - [x] Gerar CSV com a matriz de distâncias entre cada vértice
 - [ ] Implementar o método de Clarke e Wright para gerar o roteiro final
 - [ ] Refatorar código (desacoplar)
