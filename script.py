@@ -21,8 +21,8 @@ pos = {v:v for v in weighted_G.nodes()}
 # Desenhar grafo
 nx.draw_networkx(weighted_G, pos, node_size=20, with_labels=False, width=0.2)
 
-CD = (-45.6028463, -23.0316574)
-DESTINOS = {'CD': CD,'A': (-45.5996569, -23.0284983), 'B': (-45.5979163, -23.0304307), 'C': (-45.5990331, -23.0315897), 'D': (-45.6056408, -23.0272866), 'E': (-45.6084752, -23.0293651), 'F': (-45.6054539, -23.029753), 'G': (-45.6040497, -23.0338179), 'H': (-45.6039264, -23.0348083), 'I': (-45.6018611, -23.0357605)}
+Empresa = (-45.6028463, -23.0316574)
+DESTINOS = {'Empresa': Empresa,'A': (-45.5996569, -23.0284983), 'B': (-45.5979163, -23.0304307), 'C': (-45.5990331, -23.0315897), 'D': (-45.6056408, -23.0272866), 'E': (-45.6084752, -23.0293651), 'F': (-45.6054539, -23.029753), 'G': (-45.6040497, -23.0338179), 'H': (-45.6039264, -23.0348083), 'I': (-45.6018611, -23.0357605)}
 
 file_teste = open('dijkstra_graph.txt', 'w')
 
@@ -30,22 +30,22 @@ file_teste = open('dijkstra_graph.txt', 'w')
 trajetos = {}
 
 def Dijkstra(key, value):
-    # A PARTIR DO CD - DESCOMENTAR PARA VISUALIZAR
-    # path = nx.bidirectional_dijkstra(weighted_G, source=CD, target=value, weight='weight')
+    # A PARTIR DE Empresa - DESCOMENTAR PARA VISUALIZAR
+    # path = nx.bidirectional_dijkstra(weighted_G, source=Empresa, target=value, weight='weight')
     # # ROTA = path[1]
-    # # length = nx.dijkstra_path_length(weighted_G, source=CD, target=value, weight='weight')
+    # # length = nx.dijkstra_path_length(weighted_G, source=Empresa, target=value, weight='weight')
     # # CUSTO = length
     # result = nx.DiGraph()
     # for data in weighted_G.edges(data=True):
     #     if data[0] in path[1] and data[1] in path[1]:
     #         result.add_edge(data[0], data[1], weight=data[2]['weight'])
 
-    # # nx.write_edgelist(result, 'teste.txt', data=True)
-    # nx.draw_networkx_labels(result, pos, font_size=9, font_family='sans-serif', labels={DESTINOS[key]: key}, font_weight='bold', font_color='w')
-    # nx.draw_networkx(result, pos, node_size=20, with_labels=False, width=0.5, node_color='r', edge_color='r')
-    # nx.draw_networkx_nodes(result, pos, nodelist=[value], node_size=200, node_color='g')
-    # nx.draw_networkx_nodes(result, pos, nodelist=[CD], node_size=250, node_color='b')
-    # # write dict in file_teste
+    nx.draw_networkx_labels(result, pos, font_size=9, font_family='sans-serif', labels={DESTINOS[key]: key}, font_weight='bold', font_color='w')
+    nx.draw_networkx(result, pos, node_size=20, with_labels=False, width=0.5, node_color='r', edge_color='r')
+    nx.draw_networkx_nodes(result, pos, nodelist=[value], node_size=200, node_color='g')
+    nx.draw_networkx_nodes(result, pos, nodelist=[Empresa], node_size=350, node_color='w')
+    nx.draw_networkx_labels(result, pos, font_size=13, font_family='sans-serif', labels={Empresa: 'Empresa'}, font_weight='bold',font_color='w', bbox=dict(facecolor='r', alpha=1, edgecolor='black', boxstyle='round,pad=0.2'))
+
     # # file_teste.write(str(key) + ' ' + str(value) + '\n')
 
     # PARA TODOS OS VERTICES
